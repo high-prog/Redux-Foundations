@@ -17,7 +17,7 @@ const initialState = {
 //Create asyncThunk function recieves action type and callback for the api call or async work
 //Automatically dispatches based on the returned promise
 //generated pending , fulfilled, rejected action types so add extra reducers to slice as these are not created by slice
-const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
+export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
   return axios
     .get('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.data.map((user) => user.id));
@@ -44,4 +44,4 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
-export default {fetchUsers} = fetchUsers;
+

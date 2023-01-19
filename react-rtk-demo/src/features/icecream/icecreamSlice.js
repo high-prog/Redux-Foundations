@@ -1,5 +1,6 @@
 //get createSlice function
 import { createSlice } from '@reduxjs/toolkit'
+import {ordered as cakeOrdered} from '../cake/cakeSlice'
 
 
 //initialState
@@ -19,10 +20,10 @@ const icecreamSlice = createSlice({
       state.numoficecream += action.payload;
     },
     //Extra reducers are used to change the state from another reducer of another feature
-    extraReducers: {
-      ['cake/ordered']: (state, action) => {
-        state.numoficecreams--;
-      },
+    extraReducers: (builder) => {
+        builder.addCase(cakeOrdered , (state) => {
+          state.numofIcecreams--;
+        })
     },
   },
 });

@@ -1,14 +1,11 @@
 //Contains the code related to our redux store
-const configureStore = require('@reduxjs/toolkit').configureStore;
-const cakeReducer = require('../features/cake/cakeSlice');
-const icecreamReducer = require('../features/icecream/icecreamSlice');
-const userReducer = require('../features/users/userSlice');
+import { configureStore } from '@reduxjs/toolkit';
+import cakeReducer from '../features/cake/cakeSlice';
+import icecreamReducer from '../features/icecream/icecreamSlice';
+import userReducer from '../features/users/userSlice';
 
 //applying middleware logger
-const reduxlogger = require('redux-logger');
-const logger = reduxlogger.createLogger();
-
-const thunk = require('redux-thunk');
+import logger from 'redux-logger';
 
 const store = configureStore({
   reducer: {
@@ -20,4 +17,4 @@ const store = configureStore({
   // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
 
-module.exports = store;
+export default store;
