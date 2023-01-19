@@ -1,0 +1,6 @@
+{
+  "name": "redux-toolkit-demo",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1"
+  }
+}
