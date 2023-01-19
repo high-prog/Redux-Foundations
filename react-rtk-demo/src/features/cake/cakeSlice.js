@@ -1,7 +1,7 @@
 //adding slice is a redux convention
 //it is recommended to store actions and reducers for one feature 'cake' in a single file with name slice.
 
-const createSlice = require('@reduxjs/toolkit').createSlice;
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   numOfcakes:10,
@@ -26,5 +26,5 @@ const cakeSlice = createSlice({
 })
 
 
-module.exports = cakeSlice.reducer
-module.exports.cakeActions = cakeSlice.actions
+export default  cakeSlice.reducer
+export default {ordered, restocked } = cakeSlice.actions

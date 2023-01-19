@@ -1,5 +1,6 @@
 //get createSlice function
-const createSlice = require('@reduxjs/toolkit').createSlice;
+import { createSlice } from '@reduxjs/toolkit'
+
 
 //initialState
 const initialState = {
@@ -27,5 +28,5 @@ const icecreamSlice = createSlice({
 });
 
 //export the slice and actions
-module.exports = icecreamSlice.reducer;
-module.exports.icecreamActions = icecreamSlice.actions;
+export default icecreamSlice.reducer;
+export default {ordered, restocked } = icecreamSlice.actions;

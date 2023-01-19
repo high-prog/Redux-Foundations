@@ -1,12 +1,12 @@
 //Async api call in redux toolkit
 
-const createSlice = require('@reduxjs/toolkit').createSlice;
+import { createSlice } from '@reduxjs/toolkit';
 
 //redux toolkit provides with Async thunk to handle async functoins
-const createAsyncThunk = require('@reduxjs/toolkit').createAsyncThunk;
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 //To make the api call
-const axios = require('axios');
+import axios from 'axios';
 
 const initialState = {
   loading: false,
@@ -43,5 +43,5 @@ const userSlice = createSlice({
   },
 });
 
-module.exports = userSlice.reducer;
-module.exports.fetchUsers = fetchUsers;
+export default userSlice.reducer;
+export default {fetchUsers} = fetchUsers;
