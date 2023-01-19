@@ -14,7 +14,7 @@ const initialState = {
   error: '',
 };
 
-//Create asyncThunk function
+//Create asyncThunk function recieves action type and callback for the api call or async work
 //Automatically dispatches based on the returned promise
 //generated pending , fulfilled, rejected action types so add extra reducers to slice as these are not created by slice
 const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
