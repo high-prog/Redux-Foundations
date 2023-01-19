@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function () {
+export const CakeView =  () => {
   return <h1>Cake</h1>;
 }

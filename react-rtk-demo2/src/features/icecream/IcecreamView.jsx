@@ -1,5 +1,5 @@
 import React from 'react';
 
-export default function () {
+export const IcecreamView = () => {
   return <h1>icecream</h1>;
-}
+};
